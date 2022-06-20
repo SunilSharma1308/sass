@@ -1,0 +1,306 @@
+    @import "mix";
+    @import "var";
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        margin: 0px auto;
+        justify-content: center;
+        // height: 100vh;
+        width: 1200px;
+        // width: 100%;
+    }
+    
+    .header {
+        background-color: $background;
+        width: 100%;
+        // position: static;
+        ul {
+            display: flex;
+            justify-content: end;
+            cursor: pointer;
+            li {
+                float: left;
+                list-style-type: none;
+                padding: 20px 16px;
+                a {
+                    font-size: 13px;
+                    font-family: 'Roboto', sans-serif;
+                    text-decoration: none;
+                    font-weight: 300;
+                    color: $color;
+                    display: block;
+                }
+            }
+             :hover {
+                background-color: blue;
+                color: white;
+            }
+             :hover .dropdown-content {
+                background-color: black;
+                color: white;
+                // padding: 0px;
+                font-size: 13px;
+                display: block;
+            }
+        }
+        .dropdown {
+            position: relative;
+            // background-color: black;
+            .dropdown-content {
+                position: absolute;
+                top: 40px;
+                z-index: 1;
+                display: none;
+                font-weight: 300;
+                font-family: 'Roboto', sans-serif;
+                font-size: 13px;
+            }
+        }
+    }
+    
+    .Work {
+        width: 100%;
+        // height: 100vh;
+        .Work_future {
+            // position: relative;
+            background: url("../images/banner-bg.jpg");
+            width: 100%;
+            height: 60vh;
+            background-position: center;
+            background-size: cover;
+            .Work_future_content {
+                position: absolute;
+                display: flex;
+                width: 1200px;
+                align-items: center;
+                justify-content: space-between;
+                .contents {
+                    // display: grid;
+                    // align-items: center;
+                    // text-align: center;
+                    h1 {
+                        color: white;
+                        font-size: 60px;
+                        font-family: 'Roboto', sans-serif;
+                        padding: 0px 0px 40px 0px;
+                    }
+                    button {
+                        @include button;
+                        // padding: 15px 90px;
+                        // font-size: 20px;
+                        // font-weight: 800;
+                        // cursor: pointer;
+                        // align-items: flex-start;
+                        // position: absolute;
+                    }
+                }
+                .background {
+                    // position: absolute;
+                    height: 60vh;
+                    width: 100%;
+                    background-repeat: no-repeat;
+                    background-size: 60%;
+                    background-image: url(/home/innoraft/Desktop/SASS/images/banner-img.png);
+                    background-position: center;
+                }
+                // z-index: 1;
+            }
+        }
+    }
+    
+    .overview {
+        background-image: url(/home/innoraft/Desktop/SASS/images/DWP-bg1.jpg);
+        width: 100%;
+        background-size: cover;
+        .overview_content {
+            background-color: rgba(45, 91, 243, 0.664);
+            width: 60%;
+            padding: 40px 40px;
+            font-family: 'Roboto', sans-serif;
+            color: $col;
+            h1 {
+                font-weight: 600;
+                padding: 10px 0px;
+            }
+            h2,
+            h3 {
+                font-weight: 400;
+                font-size: 28px;
+            }
+            p {
+                padding: 10px 0px;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+    }
+    
+    .Workplace {
+        width: 100%;
+        height: 143px;
+        background-color: black;
+        position: relative;
+        .Workplace_background {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            height: 143px;
+            width: 100%;
+            .Workplace_background_image1 {
+                background-image: url(/home/innoraft/Desktop/SASS/images/HCL-Fluid-Workplace-bg-left.png);
+                width: 200px;
+                background-repeat: no-repeat;
+                height: 200px;
+            }
+            .Workplace_background_image2 {
+                background-image: url(/home/innoraft/Desktop/SASS/images/HCL-Fluid-Workplace-bg-right.png);
+                width: 200px;
+                background-size: 100%;
+                margin-top: 79px;
+                background-repeat: no-repeat;
+                height: 200px;
+            }
+        }
+        .Workplace_content {
+            text-align: center;
+            padding: 30px 0px;
+            // align-items: center;
+        }
+        h1 {
+            color: $col;
+            font-size: 45px;
+        }
+        pre {
+            color: $col;
+            padding-top: 10px;
+            font-size: 17px;
+        }
+    }
+    
+    .Productivity {
+        background-color: $background;
+        width: 100%;
+        .container {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            h1 {
+                font-size: 30px;
+                padding: 20px 0px;
+                font-weight: 400;
+            }
+        }
+        p {
+            padding: 10px 0px;
+            font-weight: 300;
+        }
+        // .Productivity_block {
+        // position: relative;
+        .Productivity_blocks {
+            border: 0.5px solid rgb(65, 250, 219);
+            display: flex;
+            margin: 50px 0px;
+            border-radius: 8px;
+            align-items: center;
+            position: relative;
+            color: blue;
+            font-size: 20px;
+            justify-content: space-around;
+            & img {
+                position: absolute;
+                text-align: center;
+                margin: 0px auto;
+                width: 120px;
+                left: 45%;
+                justify-content: center;
+            }
+            p {
+                padding: 10px 150px;
+                text-align: left;
+                font-weight: 400;
+            }
+            h5 {
+                // padding: 10px 120px;
+                font-size: 20px;
+                align-items: center;
+                font-weight: 400;
+            }
+        }
+        .Productivity_main_content {
+            display: flex;
+            text-align: center;
+            padding: 30px 0px;
+            color: rgb(6, 100, 241);
+            justify-content: space-between;
+            img {
+                width: 100px;
+            }
+            p {
+                font-weight: 500;
+            }
+        }
+        h2 {
+            color: $color;
+            font-weight: 300;
+        }
+        button {
+            // padding: ;
+            @include button;
+            background-color: rgb(11, 75, 194);
+            border: none;
+            margin: 50px 0px;
+            color: $col;
+        }
+    }
+    
+    .Analysts {
+        background-image: url(/home/innoraft/Desktop/SASS/images/small-smart-bg2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        color: white;
+        text-align: center;
+        button {
+            @include button;
+            background-color: transparent;
+            border: 0.5px solid white;
+            margin: 30px 0px;
+            color: white;
+        }
+        .Analysts_content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            h1 {
+                font-size: 70px;
+                text-align: right;
+                span {
+                    font-size: 15px;
+                }
+            }
+            .line {
+                border-left: 0.5px solid white;
+                height: 120px;
+            }
+            .Gartner_content {
+                text-align: left;
+                align-items: center;
+                h3 {
+                    font-weight: 400;
+                    font-size: 30px;
+                }
+                p {
+                    font-weight: 200;
+                    padding: 15px 0px;
+                }
+                button {
+                    padding: 10px 15px;
+                    background-color: $background;
+                    color: rgb(5, 53, 126);
+                }
+            }
+        }
+    }
